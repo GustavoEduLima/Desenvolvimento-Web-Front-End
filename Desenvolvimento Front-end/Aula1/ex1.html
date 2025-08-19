@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio1</title>
+
+    <style>
+        body {
+            background-color: black;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: blue; /* Azul */
+            color: white;
+        }
+
+        #contador {
+            color: white;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    
+<button> clique aqui</button>
+
+    <p id="contador">0</p>
+    <script>
+        let contador = 0;
+        const botao = document.querySelector("button");
+        const paragrafo = document.querySelector("#contador");
+
+        botao.addEventListener("click", () => {
+            contador++;
+            paragrafo.textContent = contador;
+
+            if (contador >= 10) {
+                paragrafo.textContent = "Chega, né?";
+                botao.disabled = true; // Desabilita o botão após 10 cliques
+            }
+        });
+    </script>
+
+
+
+</body>
+</html>
